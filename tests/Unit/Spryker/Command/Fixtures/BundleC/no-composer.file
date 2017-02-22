@@ -1,0 +1,10 @@
+{
+  "name": "spryker/test-package",
+  "require": {
+    "spryker/package-a": "^1.0.0",
+    "spryker/package-b": "^1.1.0",
+    "spryker/package-c": "^1.1.1"
+    "spryker/package-d": "^1.0.0 || ^2.0.0"
+  },
+  "license": "proprietary"
+}

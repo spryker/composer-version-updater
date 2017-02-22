@@ -1,0 +1,37 @@
+{
+  "name": "spryker/composer-version-updater",
+  "require": {
+    "sebastian/diff": "^1.4",
+    "symfony/console": "^3.0.0",
+    "symfony/filesystem": "^3.2",
+    "symfony/finder": "^3.0.0",
+    "symfony/var-dumper": "^3.2",
+    "zendframework/zend-filter": "^2.7"
+  },
+  "require-dev": {
+    "spryker/code-sniffer": "*",
+    "codeception/codeception": "*"
+  },
+  "description": "ComposerVersionUpdater tool",
+  "license": "proprietary",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Spryker\\": "src/Spryker/"
+    }
+  },
+  "autoload-dev": {
+    "psr-0": {
+      "Unit": "tests/"
+    }
+  }
+}

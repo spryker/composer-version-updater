@@ -1,0 +1,60 @@
+diff --git a/Bundles/Acl/composer.json b/Bundles/Acl/composer.json
+index 1f7945e..d4f8a9a 100644
+--- a/Bundles/Acl/composer.json
++++ b/Bundles/Acl/composer.json
+@@ -6,22 +6,25 @@
+     }
+   },
+   "require": {
+-    "spryker/application": "^2.4.4",
+     "spryker/config": "^2.0.0",
+     "spryker/gui": "^2.0.0",
+-    "spryker/installer": "^2.0.0 || ^3.0.0",
+     "spryker/kernel": "^2.0.0",
+-    "spryker/library": "^2.0.0",
+-    "spryker/propel": "^2.0.0",
+-    "spryker/silex": "^2.0.0",
++    "spryker/propel-orm": "^1.0.0",
+     "spryker/symfony": "^2.1.6",
+-    "spryker/url": "^2.0.0",
+-    "spryker/user": "^2.0.0"
++    "spryker/user": "^2.0.0",
++    "spryker/util-date-time": "^1.0.0",
++    "spryker/util-text": "^1.0.0"
+   },
+   "require-dev": {
+     "spryker/code-sniffer": "*",
++    "spryker/propel": "*",
++    "spryker/silex": "*",
+     "spryker/testify": "*"
+   },
++  "suggest": {
++    "spryker/installer": "If you want to use Installer plugins you need to install spryker/installer.",
++    "spryker/silex": "If you want to use ServiceProvider you need to install spryker/silex."
++  },
+   "description": "Acl bundle",
+   "license": "proprietary",
+   "minimum-stability": "dev",
+diff --git a/Bundles/Acl/src/Spryker/Zed/Acl/AclDependencyProvider.php b/Bundles/Acl/src/Spryker/Zed/Acl/AclDependencyProvider.php
+index 31dd5d3..ebb2470 100644
+--- a/Bundles/Acl/src/Spryker/Zed/Acl/AclDependencyProvider.php
++++ b/Bundles/Acl/src/Spryker/Zed/Acl/AclDependencyProvider.php
+@@ -8,7 +8,6 @@
+ namespace Spryker\Zed\Acl;
+
+ use Spryker\Zed\Acl\Dependency\Facade\AclToUserBridge;
+-use Spryker\Zed\Application\Communication\Plugin\Pimple;
+ use Spryker\Zed\Kernel\AbstractBundleDependencyProvider;
+ use Spryker\Zed\Kernel\Container;
+
+@@ -31,8 +30,8 @@ class AclDependencyProvider extends AbstractBundleDependencyProvider
+         $container = $this->addFacadeUser($container);
+         $container = $this->addAclQueryContainer($container);
+
+-        $container[self::SERVICE_DATE_FORMATTER] = function () {
+-            return (new Pimple())->getApplication()['dateFormatter'];
++        $container[self::SERVICE_DATE_FORMATTER] = function (Container $container) {
++            return $container->getLocator()->utilDateTime()->service();
+         };
+
+         return $container;

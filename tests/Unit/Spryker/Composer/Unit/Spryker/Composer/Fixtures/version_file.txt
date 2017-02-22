@@ -1,0 +1,3 @@
+Application  major (2.8.0 >> 3.0.0)
+Kernel  minor (2.8.0 >> 2.9.0)
+Console  patch (2.8.0 >> 2.8.1)
