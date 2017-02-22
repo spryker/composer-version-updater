@@ -84,7 +84,7 @@ class ComposerJsonValidator extends Command
             if (file_exists($bundleFileInfo->getPathname() . '/composer.json')) {
                 $this->runComposerValidate($bundleFileInfo);
             } else {
-                $output->write(sprintf(static::MESSAGE_COULD_NOT_FIND_COMPOSER_JSON, $bundleFileInfo->getPathname()));
+                $output->writeln(sprintf(static::MESSAGE_COULD_NOT_FIND_COMPOSER_JSON, $bundleFileInfo->getPathname()));
             }
         }
 

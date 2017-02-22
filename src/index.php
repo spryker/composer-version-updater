@@ -9,16 +9,18 @@ require_once APPLICATION_ROOT . '/vendor/autoload.php';
 use Spryker\Command\ComposerJsonValidator;
 use Spryker\Command\PrBundleValidator;
 use Spryker\Command\ConstraintUpdater;
+use Spryker\Composer\BundleNamesFinder;
 use Symfony\Component\Console\Application;
 
 $constraintUpdaterCommand = new ConstraintUpdater();
 
+$bundleNamesFinder = new BundleNamesFinder();
 $application = new Application();
 $application
     ->addCommands([
         new ConstraintUpdater(),
         new PrBundleValidator(),
-        new ComposerJsonValidator(),
+        new ComposerJsonValidator($bundleNamesFinder),
     ])
 ;
 

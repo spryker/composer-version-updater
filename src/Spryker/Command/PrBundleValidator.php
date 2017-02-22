@@ -78,14 +78,16 @@ class PrBundleValidator extends Command
         $hasMissingBundles = false;
         foreach ($bundleCollection as $missingInPrTemplate) {
             $hasMissingBundles = true;
-            $output->write(sprintf('"<fg=green>%s</>" is missing in your PR template.', $missingInPrTemplate));
+            $output->writeln(sprintf('"<fg=green>%s</>" is missing in your PR template.', $missingInPrTemplate));
         }
 
         if ($hasMissingBundles) {
-            $output->write('Please add all the printed bundles to your pull-request and run the process again.');
+            $output->writeln('Please add all the printed bundles to your pull-request and run the process again.');
 
             return 1;
         }
+
+        $output->writeln('<fg=green>Your PR template contains all bundles i could see in the diff.</>');
 
         return 0;
     }

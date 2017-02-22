@@ -1,6 +1,6 @@
 Acl  major (2.0.2 >> 3.0.0)
 10 files
-Application  major (2.7.1 >> 3.0.0)
+Application  major (2.8.1 >> 3.0.0)
 47 files
 Assertion  major (2.0.0 >> 3.0.0)
 1 files
@@ -8,28 +8,32 @@ Auth  major (2.0.14 >> 3.0.0)
 13 files
 AuthMailConnector  major (2.0.1 >> 3.0.0)
 1 files
-Availability  major (3.0.3 >> 4.0.0)
-7 files
-AvailabilityCartConnector  major (3.0.1 >> 4.0.0)
+Availability  major (4.0.0 >> 5.0.0)
+4 files
+AvailabilityCartConnector  major (3.0.3 >> 4.0.0)
 1 files
-Braintree  major (0.4.4 >> 1.0.0)
+AvailabilityGui  major (1.0.0 >> 2.0.0)
+5 files
+Braintree  major (0.4.6 >> 1.0.0)
 9 files
 Cache  major (2.1.1 >> 3.0.0)
 3 files
-Calculation  major (2.1.0 >> 3.0.0)
+Calculation  major (2.2.0 >> 3.0.0)
 11 files
-Cart  major (2.3.0 >> 3.0.0)
-12 files
+Cart  major (2.4.0 >> 3.0.0)
+15 files
 Catalog  major (4.0.0 >> 5.0.0)
 1 files
 Category  major (2.4.1 >> 3.0.0)
 15 files
 CategoryExporter  major (2.0.3 >> 3.0.0)
 7 files
-Checkout  major (2.2.5 >> 3.0.0)
+Checkout  major (2.2.7 >> 3.0.0)
 18 files
-Cms  major (3.1.2 >> 4.0.0)
+Cms  major (3.2.0 >> 4.0.0)
 13 files
+CmsGui  major (1.0.0 >> 2.0.0)
+7 files
 Collector  major (4.0.0 >> 5.0.0)
 27 files
 CollectorSearchConnector  major (0.0.0 >> 1.0.0)
@@ -51,16 +55,16 @@ CustomerGroup  major (1.0.0 >> 2.0.0)
 CustomerGroupDiscountConnector  major (1.0.0 >> 2.0.0)
 1 files
 Development  major (2.2.1 >> 3.0.0)
-24 files
-Discount  major (3.5.0 >> 4.0.0)
+12 files
+Discount  major (3.6.2 >> 4.0.0)
 0 files
-DiscountCalculationConnector  major (3.1.3 >> 4.0.0)
+DiscountCalculationConnector  major (3.2.0 >> 4.0.0)
 0 files
-DiscountSalesAggregatorConnector  major (2.1.4 >> 3.0.0)
+DiscountSalesAggregatorConnector  major (2.2.2 >> 3.0.0)
 0 files
-DummyPayment  major (1.5.0 >> 2.0.0)
+DummyPayment  major (1.5.1 >> 2.0.0)
 0 files
-ErrorHandler  major (1.0.5 >> 2.0.0)
+ErrorHandler  major (1.1.1 >> 2.0.0)
 0 files
 EventJournal  major (2.0.1 >> 3.0.0)
 0 files
@@ -68,7 +72,7 @@ Glossary  major (2.3.0 >> 3.0.0)
 0 files
 Graph  major (2.0.0 >> 3.0.0)
 0 files
-Gui  major (2.6.0 >> 3.0.0)
+Gui  major (2.6.2 >> 3.0.0)
 0 files
 Heartbeat  major (2.1.3 >> 3.0.0)
 0 files
@@ -90,7 +94,7 @@ Mail  major (3.0.1 >> 4.0.0)
 0 files
 Maintenance  major (2.1.0 >> 3.0.0)
 0 files
-Messenger  major (2.1.0 >> 3.0.0)
+Messenger  major (2.1.1 >> 3.0.0)
 0 files
 Money  major (1.1.0 >> 2.0.0)
 0 files
@@ -100,23 +104,25 @@ NewRelicApi  major (0.0.0 >> 1.0.0)
 0 files
 Newsletter  major (3.0.0 >> 4.0.0)
 0 files
-Nopayment  major (2.0.4 >> 3.0.0)
+Nopayment  major (2.0.6 >> 3.0.0)
 0 files
-Oms  major (5.0.3 >> 6.0.0)
+Oms  major (5.0.6 >> 6.0.0)
 0 files
-OmsDiscountConnector  major (2.0.5 >> 3.0.0)
+OmsDiscountConnector  major (2.0.7 >> 3.0.0)
 0 files
-Payment  major (2.0.3 >> 3.0.0)
+Payment  major (2.0.5 >> 3.0.0)
 0 files
-Payolution  major (2.5.1 >> 3.0.0)
+Payolution  major (2.5.3 >> 3.0.0)
 0 files
-Payone  major (3.0.2 >> 4.0.0)
+Payone  major (3.0.4 >> 4.0.0)
 0 files
 Price  major (3.0.3 >> 4.0.0)
 0 files
 PriceCartConnector  major (2.0.1 >> 3.0.0)
 0 files
-Product  major (4.3.0 >> 5.0.0)
+Product  major (4.4.0 >> 5.0.0)
+0 files
+ProductBundle  major (1.0.3 >> 2.0.0)
 0 files
 ProductCartConnector  major (3.0.0 >> 4.0.0)
 0 files
@@ -126,11 +132,11 @@ ProductDiscountConnector  major (2.0.2 >> 3.0.0)
 0 files
 ProductImage  major (2.0.0 >> 3.0.0)
 0 files
-ProductManagement  major (0.1.3 >> 1.0.0)
+ProductManagement  major (0.2.2 >> 1.0.0)
 0 files
-ProductOption  major (3.0.4 >> 4.0.0)
+ProductOption  major (3.1.2 >> 4.0.0)
 0 files
-ProductOptionDiscountConnector  major (3.1.3 >> 4.0.0)
+ProductOptionDiscountConnector  major (3.2.2 >> 4.0.0)
 0 files
 ProductOptionCartConnector  major (3.0.0 >> 4.0.0)
 0 files
@@ -142,27 +148,29 @@ PropelOrm  major (0.0.0 >> 1.0.0)
 0 files
 Quote  major (0.0.0 >> 1.0.0)
 0 files
-Ratepay  major (0.4.1 >> 1.0.0)
+Queue  major (0.1.0 >> 1.0.0)
 0 files
-Refund  major (3.1.2 >> 4.0.0)
+Ratepay  major (0.4.3 >> 1.0.0)
 0 files
-Sales  major (3.1.2 >> 4.0.0)
+Refund  major (3.1.4 >> 4.0.0)
 0 files
-SalesAggregator  major (3.0.2 >> 4.0.0)
+Sales  major (4.0.0 >> 5.0.0)
 0 files
-SalesSplit  major (2.0.1 >> 3.0.0)
+SalesAggregator  major (3.1.2 >> 4.0.0)
 0 files
-Search  major (5.4.0 >> 6.0.0)
+SalesSplit  major (2.0.3 >> 3.0.0)
 0 files
-Session  major (2.2.1 >> 3.0.0)
+Search  major (5.4.1 >> 6.0.0)
 0 files
-Setup  major (2.3.1 >> 3.0.0)
+Session  major (2.2.2 >> 3.0.0)
+0 files
+Setup  major (2.3.2 >> 3.0.0)
 0 files
 SequenceNumber  major (2.0.0 >> 3.0.0)
 0 files
-Shipment  major (3.1.4 >> 4.0.0)
+Shipment  major (3.1.6 >> 4.0.0)
 0 files
-StateMachine  major (1.0.6 >> 2.0.0)
+StateMachine  major (1.0.7 >> 2.0.0)
 0 files
 StepEngine  major (1.2.1 >> 2.0.0)
 0 files
@@ -176,7 +184,7 @@ Symfony  major (2.1.8 >> 3.0.0)
 0 files
 Testify  major (2.3.3 >> 3.0.0)
 0 files
-Tax  major (3.0.6 >> 4.0.0)
+Tax  major (3.1.0 >> 4.0.0)
 0 files
 TaxProductConnector  major (3.0.0 >> 4.0.0)
 0 files

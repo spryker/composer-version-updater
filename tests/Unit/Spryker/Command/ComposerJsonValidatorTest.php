@@ -33,7 +33,7 @@ class ComposerJsonValidatorTest extends PHPUnit_Framework_TestCase
         $tester = new CommandTester($command);
         $tester->execute($input);
 
-        $expectedMessage = $this->buildExpectedMessages(sprintf(ComposerJsonValidator::MESSAGE_COULD_NOT_FIND_COMPOSER_JSON, __DIR__ . '/Fixtures'));
+        $expectedMessage = $this->buildExpectedMessages(sprintf(ComposerJsonValidator::MESSAGE_COULD_NOT_FIND_COMPOSER_JSON, __DIR__ . '/Fixtures') . PHP_EOL);
 
         $this->assertSame($expectedMessage, $tester->getDisplay());
     }
