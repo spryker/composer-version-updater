@@ -200,8 +200,6 @@ User  major (2.0.6 >> 3.0.0)
 0 files
 UtilDateTime  major (0.0.0 >> 1.0.0)
 0 files
-UtilData  major (0.0.0 >> 1.0.0)
-0 files
 UtilDataReader  major (0.0.0 >> 1.0.0)
 0 files
 UtilEncoding  major (1.0.0 >> 2.0.0)

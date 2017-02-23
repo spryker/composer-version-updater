@@ -12,7 +12,6 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
@@ -108,7 +107,7 @@ class ComposerJsonValidator extends Command
      */
     protected function runComposerValidate(SplFileInfo $bundleFileInfo)
     {
-        $this->output->write('Checking: <fg=green>' . $bundleFileInfo->getFilename() . '</> ');
+        $this->output->write('Checking: <fg=green>' . $bundleFileInfo->getFilename() . '</>');
 
         $process = new Process(sprintf(static::COMMAND_PATTERN, $bundleFileInfo->getPathname()), PROJECT_ROOT);
 

@@ -76,13 +76,13 @@ class VersionUpdater implements VersionUpdaterInterface
 
                 $newConstraint = $this->buildNewConstraint($bundleVersionInfo);
 
-                $search = sprintf('"%s": "(.*?)(\d).(\d).(\d)"', $packageName);
+                $search = sprintf('"%s": "(.*?)([0-9]).([0-9]).([0-9])"', $packageName);
                 $replace = sprintf('"%s": "%s"', $packageName, $newConstraint);
 
                 $composerJsonContent = preg_replace('#' . $search . '#', $replace, $composerJsonContent);
 
                 $packageNameSearch = sprintf('"name": "%s"', $packageName);
-                $branchAliasSearch = '"dev-master": "(\d).0.x-dev"';
+                $branchAliasSearch = '"dev-master": "(.*?).0.x-dev"';
 
                 if (preg_match('#' . $branchAliasSearch . '#', $composerJsonContent) && preg_match('#' . $packageNameSearch   . '#', $composerJsonContent) && $this->isMajorBump($bundleVersionInfo)) {
                     $nextMajorVersion = $bundleVersionInfo[VersionReader::KEY_VERSION_NEW][0];
