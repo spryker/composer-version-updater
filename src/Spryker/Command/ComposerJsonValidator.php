@@ -19,7 +19,7 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 class ComposerJsonValidator extends Command
 {
 
-    const COMMAND_PATTERN = 'composer validate -d %s';
+    const COMMAND_PATTERN = 'php composer.phar validate -d %s';
     const OPTION_PATH_TO_BUNDLES = 'path-to-bundles';
     const PATH_TO_BUNDLES_SHORT = 'b';
     const MESSAGE_COULD_NOT_FIND_COMPOSER_JSON = 'Could not find a composer.json file in "<fg=green>%s</>"';

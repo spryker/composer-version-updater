@@ -94,7 +94,8 @@ class PullRequestBundleValidator extends Command
     protected function validatePullRequestContainsAllBundles()
     {
         $touchedBundleNames = $this->getBundleNamesFromDiff();
-        echo '<pre>' . PHP_EOL . \Symfony\Component\VarDumper\VarDumper::dump($touchedBundleNames) . PHP_EOL . 'Line: ' . __LINE__ . PHP_EOL . 'File: ' . __FILE__ . die();
+        echo '<pre>' . PHP_EOL . \Symfony\Component\VarDumper\VarDumper::dump($touchedBundleNames) . PHP_EOL . 'Line: ' . __LINE__ . PHP_EOL . 'File: ' . __FILE__;
+        die(); // Remove?
         $prTemplateBundleNames = $this->getBundleNamesFromPullRequest();
 
         $bundleCollection = array_diff($touchedBundleNames, $prTemplateBundleNames);
