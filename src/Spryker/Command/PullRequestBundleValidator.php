@@ -19,7 +19,7 @@ use Symfony\Component\VarDumper\VarDumper;
 class PullRequestBundleValidator extends Command
 {
 
-    const COMMAND_NAME = 'spryker:pr-bundle-validator';
+    const COMMAND_NAME = 'spryker:pr-module-validator';
 
     const OPTION_PATH_TO_DIFF = 'path-to-diff';
     const OPTION_PATH_TO_DIFF_SHORT = 'a';
