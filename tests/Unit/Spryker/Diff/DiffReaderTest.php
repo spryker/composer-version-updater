@@ -14,7 +14,7 @@ use Spryker\Diff\Exception\InvalidPathToDiffException;
 /**
  * @group Unit
  * @group Spryker
- * @group ConstraintFinder
+ * @group Diff
  * @group DiffReaderTest
  */
 class DiffReaderTest extends PHPUnit_Framework_TestCase

@@ -7,8 +7,8 @@ define('PROJECT_ROOT', realpath(APPLICATION_ROOT . '/../../..'));
 require_once APPLICATION_ROOT . '/vendor/autoload.php';
 
 use Spryker\Command\ComposerJsonValidator;
-use Spryker\Command\PullRequestBundleValidator;
 use Spryker\Command\ConstraintUpdater;
+use Spryker\Command\PullRequestBundleValidator;
 use Spryker\Composer\BundleNamesFinder;
 use Symfony\Component\Console\Application;
 
@@ -21,7 +21,6 @@ $application
         new ConstraintUpdater(),
         new PullRequestBundleValidator(),
         new ComposerJsonValidator($bundleNamesFinder),
-    ])
-;
+    ]);
 
 $application->run();

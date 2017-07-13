@@ -15,7 +15,7 @@ use Spryker\Diff\DiffReader;
  * @group Unit
  * @group Spryker
  * @group Diff
- * @group BundleNamesTest
+ * @group DiffBundleNameExtractorTest
  */
 class DiffBundleNameExtractorTest extends PHPUnit_Framework_TestCase
 {

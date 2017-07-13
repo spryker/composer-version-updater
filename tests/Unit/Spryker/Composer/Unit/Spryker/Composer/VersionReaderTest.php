@@ -97,4 +97,5 @@ class VersionReaderTest extends PHPUnit_Framework_TestCase
     {
         return __DIR__ . '/Fixtures/version_file.txt';
     }
+
 }

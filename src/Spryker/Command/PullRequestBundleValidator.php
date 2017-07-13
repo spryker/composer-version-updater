@@ -8,12 +8,13 @@
 namespace Spryker\Command;
 
 use Spryker\Composer\VersionReader;
-use Spryker\Diff\DiffReader;
 use Spryker\Diff\DiffBundleNameExtractor;
+use Spryker\Diff\DiffReader;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\VarDumper\VarDumper;
 
 class PullRequestBundleValidator extends Command
 {
@@ -62,8 +63,7 @@ class PullRequestBundleValidator extends Command
                 InputOption::VALUE_REQUIRED,
                 'Path to your version file (download: http://releases-spryker-com.herokuapp.com/release/pull-request/{your pr number}).',
                 APPLICATION_ROOT . '/data/versions.txt'
-            )
-        ;
+            );
     }
 
     /**
@@ -94,7 +94,7 @@ class PullRequestBundleValidator extends Command
     protected function validatePullRequestContainsAllBundles()
     {
         $touchedBundleNames = $this->getBundleNamesFromDiff();
-        echo '<pre>' . PHP_EOL . \Symfony\Component\VarDumper\VarDumper::dump($touchedBundleNames) . PHP_EOL . 'Line: ' . __LINE__ . PHP_EOL . 'File: ' . __FILE__;
+        echo '<pre>' . PHP_EOL . VarDumper::dump($touchedBundleNames) . PHP_EOL . 'Line: ' . __LINE__ . PHP_EOL . 'File: ' . __FILE__;
         die(); // Remove?
         $prTemplateBundleNames = $this->getBundleNamesFromPullRequest();
 

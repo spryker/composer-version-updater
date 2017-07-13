@@ -84,7 +84,7 @@ class VersionUpdater implements VersionUpdaterInterface
                 $packageNameSearch = sprintf('"name": "%s"', $packageName);
                 $branchAliasSearch = '"dev-master": "(.*?).0.x-dev"';
 
-                if (preg_match('#' . $branchAliasSearch . '#', $composerJsonContent) && preg_match('#' . $packageNameSearch   . '#', $composerJsonContent) && $this->isMajorBump($bundleVersionInfo)) {
+                if (preg_match('#' . $branchAliasSearch . '#', $composerJsonContent) && preg_match('#' . $packageNameSearch . '#', $composerJsonContent) && $this->isMajorBump($bundleVersionInfo)) {
                     $nextMajorVersion = $bundleVersionInfo[VersionReader::KEY_VERSION_NEW][0];
                     $branchAliasReplace = sprintf('"dev-master": "%d.0.x-dev"', $nextMajorVersion);
                     $composerJsonContent = preg_replace('#' . $branchAliasSearch . '#', $branchAliasReplace, $composerJsonContent);
@@ -109,8 +109,8 @@ class VersionUpdater implements VersionUpdaterInterface
     }
 
     /**
-     * @param $composerJsonContent
-     * @param $packageName
+     * @param string $composerJsonContent
+     * @param string $packageName
      *
      * @return int
      */

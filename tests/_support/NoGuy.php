@@ -1,6 +1,8 @@
 <?php
 namespace ComposerVersionUpdater;
 
+use Codeception\Actor;
+
 /**
  * Inherited Methods
  * @method void wantToTest($text)
@@ -15,12 +17,14 @@ namespace ComposerVersionUpdater;
  * @method \Codeception\Lib\Friend haveFriend($name, $actorClass = NULL)
  *
  * @SuppressWarnings(PHPMD)
-*/
-class NoGuy extends \Codeception\Actor
+ */
+class NoGuy extends Actor
 {
+
     use _generated\NoGuyActions;
 
    /**
     * Define custom actions here
     */
+
 }

@@ -8,8 +8,8 @@
 namespace Unit\Spryker\Diff;
 
 use PHPUnit_Framework_TestCase;
-use Spryker\Diff\DiffReader;
 use Spryker\Diff\DiffBundleNameExtractor;
+use Spryker\Diff\DiffReader;
 use Spryker\Diff\VersionDetector;
 
 /**
@@ -21,13 +21,15 @@ use Spryker\Diff\VersionDetector;
 class VersionDetectorTest extends PHPUnit_Framework_TestCase
 {
 
+    /**
+     * @return void
+     */
     public function testCanBeConstructedWithDiffReaderAndTouchedBundleNameFinder()
     {
         $diffReader = new DiffReader($this->getFixtureDirectory());
         $touchedBundleNameExtractor = new DiffBundleNameExtractor($diffReader);
 
         $versionDetector = new VersionDetector($diffReader);
-
     }
 
     /**
@@ -37,4 +39,5 @@ class VersionDetectorTest extends PHPUnit_Framework_TestCase
     {
         return __DIR__ . '/Fixtures';
     }
+
 }

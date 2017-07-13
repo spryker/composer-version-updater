@@ -20,6 +20,7 @@ use Symfony\Component\Console\Tester\CommandTester;
  */
 class PullRequestBundleValidatorTest extends PHPUnit_Framework_TestCase
 {
+
     const BUNDLE_FROM_DIFF = 'BundleFromDiff';
     const BUNDLE_FROM_PULL_REQUEST = 'BundleFromPullRequest';
 
@@ -79,7 +80,7 @@ class PullRequestBundleValidatorTest extends PHPUnit_Framework_TestCase
     /**
      * @param array $methods
      *
-     * @return \PHPUnit_Framework_MockObject_MockObject|PullRequestBundleValidator
+     * @return \PHPUnit_Framework_MockObject_MockObject|\Spryker\Command\PullRequestBundleValidator
      */
     private function getCommandMock(array $methods)
     {
@@ -127,6 +128,5 @@ class PullRequestBundleValidatorTest extends PHPUnit_Framework_TestCase
 
         return str_replace($search, '', $message) . PHP_EOL;
     }
-
 
 }

@@ -12,6 +12,7 @@ use Zend\Filter\Word\CamelCaseToDash;
 
 class VersionReader implements VersionReaderInterface
 {
+
     const KEY_BUNDLE_NAME = 'bundle';
     const KEY_PACKAGE_NAME = 'package';
     const KEY_VERSION_TYPE = 'declaredType';
