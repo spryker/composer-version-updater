@@ -83,7 +83,7 @@ class ComposerJsonValidator extends Command
             if (file_exists($bundleFileInfo->getPathname() . '/composer.json')) {
                 $this->runComposerValidate($bundleFileInfo);
             } else {
-                $output->writeln(sprintf(static::MESSAGE_COULD_NOT_FIND_COMPOSER_JSON, $bundleFileInfo->getPathname()));
+                $output->writeln('<fg=red>' . sprintf(static::MESSAGE_COULD_NOT_FIND_COMPOSER_JSON, $bundleFileInfo->getPathname()) . '</>');
             }
         }
 
@@ -107,14 +107,17 @@ class ComposerJsonValidator extends Command
      */
     protected function runComposerValidate(SplFileInfo $bundleFileInfo)
     {
-        $this->output->write('Checking: <fg=green>' . $bundleFileInfo->getFilename() . '</>');
+        if ($this->input->getOption('verbose')) {
+            $this->output->write('Checking: <fg=green>' . $bundleFileInfo->getFilename() . '</>');
+        }
 
         $process = new Process(sprintf(static::COMMAND_PATTERN, $bundleFileInfo->getPathname()), PROJECT_ROOT);
 
         try {
             $process->mustRun();
-
-            $this->output->write($process->getOutput());
+            if ($this->input->getOption('verbose')) {
+                $this->output->write($process->getOutput());
+            }
         } catch (ProcessFailedException $e) {
             $this->output->write('<fg=red>' . $e->getMessage() . '</>');
         }

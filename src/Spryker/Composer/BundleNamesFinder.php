@@ -20,7 +20,7 @@ class BundleNamesFinder
     public function getBundleNames($bundlesDirectory)
     {
         $finder = new Finder();
-        $finder->in($bundlesDirectory)->directories()->depth('0');
+        $finder->in($bundlesDirectory)->directories()->depth('0')->sortByName();
 
         return $finder;
     }
