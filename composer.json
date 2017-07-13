@@ -5,6 +5,7 @@
     "symfony/console": "^3.0.0",
     "symfony/filesystem": "^3.2",
     "symfony/finder": "^3.0.0",
+    "symfony/process": "^3.0.0",
     "symfony/var-dumper": "^3.2",
     "zendframework/zend-filter": "^2.7"
   },
