@@ -61,8 +61,8 @@ class PullRequestBundleValidator extends Command
                 static::OPTION_PATH_TO_VERSION_FILE,
                 static::OPTION_PATH_TO_VERSION_FILE_SHORT,
                 InputOption::VALUE_REQUIRED,
-                'Path to your version file (download: http://releases-spryker-com.herokuapp.com/release/pull-request/{your pr number}).',
-                APPLICATION_ROOT . '/data/versions.txt'
+                'Path to your version file (download: https://releases.spryker.com/release/pull-request/{your pr number}.json).',
+                APPLICATION_ROOT . '/data/versions.txt' //TODO: JSON
             );
     }
 
